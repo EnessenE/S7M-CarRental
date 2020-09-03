@@ -3,7 +3,7 @@
 
 #include "Car.h"
 
-class Sedan: Car{
+class Sedan: public Car{
     public:
         double PricePerKm =  0.29;
         bool HasTowbar;

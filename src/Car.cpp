@@ -16,10 +16,10 @@ bool Car::Rent()
 double Car::Return(int kilometers) 
 {
     if (IsAvailable){
-        throw 0;
+        throw std::logic_error("Car was not rented");
     }
     if (kilometers < Kilometers){
-        throw 1;
+        throw std::invalid_argument("Car is returned with less kilomters than it had");
     }
 
     double cost = PricePerKM * (kilometers - Kilometers);

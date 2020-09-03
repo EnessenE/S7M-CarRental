@@ -58,7 +58,7 @@ static size_t selectCar(const RentalAdministration* administration)
 {
     size_t carNumber = 0;
     cout << "These cars are currently listed:";
-    PrintCars(administration);
+    printCars(administration);
     cout << "\nPlease enter a car number: ";
     std::cin >> carNumber;
     std::cin.ignore();

@@ -4,7 +4,7 @@
 #define __CAR_H__
 
 class Car{
-    public: 
+    protected:
         int Kilometers;
         std::string Manufacturer;
         std::string Model;
@@ -14,6 +14,7 @@ class Car{
         bool IsAvailable;
         double PricePerKM;
 
+    public: 
         Car() = default;
         Car(std::string manufacturer, std::string model, int buildyear, std::string licenseplate, double pricePerKM);
 

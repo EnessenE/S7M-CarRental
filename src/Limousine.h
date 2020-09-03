@@ -5,7 +5,7 @@
 
 #include "Car.h"
 
-class Limousine: Car{
+class Limousine: public Car{
     public:
         double PricePerKm = 2.5;
         bool HasMinibar;
