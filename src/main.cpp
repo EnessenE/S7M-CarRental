@@ -46,12 +46,12 @@ static const Car* GetCurrentCar(const RentalAdministration* administration, size
 static void printCars(const RentalAdministration* administration)
 {
     // pseudo code:
-    // int i = 1;
-    // foreach (car in administration->GetCars())
-    // {
-    //     cout << "\n" << i << ": " << car.ToString;
-    //     i++;
-    // }
+    int i = 1;
+    for (Car* car : administration->GetCars()) 
+    {
+        cout << "\n" << i << ": " << car->ToString();
+        i++;
+    }
 }
 
 static size_t selectCar(const RentalAdministration* administration)

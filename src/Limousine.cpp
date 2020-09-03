@@ -3,7 +3,7 @@
 // TODO: implement your class methods here
 
 
-double Car::Return(int kilometers) 
+double Limousine::Return(int kilometers) 
 {
     double price = Car::Return(kilometers);
     NeedsCleaning = true;

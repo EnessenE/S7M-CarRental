@@ -28,6 +28,10 @@ double Car::Return(int kilometers)
     return cost;
 }
 
+void Car::Clean() 
+{
+}
+
 string Car::ToString() const
 {
     return Manufacturer + " - " + Model + ", " + LicensePlate;

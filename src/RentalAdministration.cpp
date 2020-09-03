@@ -20,6 +20,7 @@ bool RentalAdministration::Add(Car *car)
     }
     //push_back adds to list/array/vector
     cars.push_back(car);
+    return true;
 }
 
 bool RentalAdministration::RentCar(string licensePlate)
@@ -59,7 +60,7 @@ void RentalAdministration::CleanCar(string licensePlate)
     car->Clean();
 }
 
-vector<Car*> RentalAdministration::GetCars() 
+vector<Car*> RentalAdministration::GetCars() const
 {
     return cars;
 }

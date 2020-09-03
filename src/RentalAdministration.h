@@ -8,8 +8,6 @@ class RentalAdministration{
     public:
         RentalAdministration();
 
-        vector<Car*> cars;
-
         bool Add(Car* car);
 
         bool RentCar(string licensePlate);
@@ -18,8 +16,9 @@ class RentalAdministration{
 
         void CleanCar(string licensePlate);
 
-        vector<Car*> GetCars();
+        vector<Car*> GetCars() const;
     private:
+        vector<Car*> cars;
         Car* FindCar(string licensePlate);
         Car* FindCarWithException(string licensePlate);
 };

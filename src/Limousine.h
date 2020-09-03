@@ -15,5 +15,7 @@ class Limousine: public Car{
         bool GetHasMinibar() const;
 
         void Clean();
+
+        double Return(int kilometers);
 };
 #endif // __LIMOUSINE_H__
