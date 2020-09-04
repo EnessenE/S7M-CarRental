@@ -1,10 +1,15 @@
-#include <vector>
-#include "Car.h"
 #ifndef __RENTALADMINISTRATION_H__
 #define __RENTALADMINISTRATION_H__
 
+#include <vector>
+#include "Car.h"
 
 class RentalAdministration{
+    private:
+        vector<Car*> cars;
+        Car* FindCar(string licensePlate);
+        Car* FindCarWithException(string licensePlate);
+
     public:
         RentalAdministration();
 
@@ -17,10 +22,6 @@ class RentalAdministration{
         void CleanCar(string licensePlate);
 
         vector<Car*> GetCars() const;
-    private:
-        vector<Car*> cars;
-        Car* FindCar(string licensePlate);
-        Car* FindCarWithException(string licensePlate);
 };
 
 #endif // __RENTALADMINISTRATION_H__

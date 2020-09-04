@@ -1,7 +1,6 @@
-#include <string>
-
 #ifndef __CAR_H__
 #define __CAR_H__
+#include <string>
 
 class Car{
     protected:

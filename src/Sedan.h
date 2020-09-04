@@ -4,11 +4,11 @@
 #include "Car.h"
 
 class Sedan: public Car{
-    public:
+    private:
         double PricePerKm =  0.29;
         bool HasTowbar;
         int LastCleanedAtKm;
-        
+    public: 
         Sedan(std::string manufacturer, std::string model, int buildyear, std::string licenseplate, bool hasTowbar);
 
         bool GetHasTowbar() const;
