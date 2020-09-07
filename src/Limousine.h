@@ -6,7 +6,6 @@
 
 class Limousine: public Car{
     private:
-        double PricePerKm = 2.5;
         bool HasMinibar;
     public:
         Limousine(std::string manufacturer, std::string model, int buildyear, std::string licenseplate, bool hasMinibar);

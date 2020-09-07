@@ -17,6 +17,7 @@ void Sedan::Clean()
 
 Sedan::Sedan(std::string manufacturer, std::string model, int buildyear, std::string licenseplate, bool hasTowbar) 
 {
+    PricePerKM = 0.29;
     Kilometers = 0;
     IsAvailable = true;
     NeedsCleaning = false;

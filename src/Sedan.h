@@ -5,7 +5,6 @@
 
 class Sedan: public Car{
     private:
-        double PricePerKm =  0.29;
         bool HasTowbar;
         int LastCleanedAtKm;
     public: 

@@ -22,6 +22,7 @@ void Limousine::Clean()
 
 Limousine::Limousine(std::string manufacturer, std::string model, int buildyear, std::string licenseplate, bool hasMinibar) 
 {
+    PricePerKM = 2.5;
     Kilometers = 0;
     IsAvailable = true;
     NeedsCleaning = false;
