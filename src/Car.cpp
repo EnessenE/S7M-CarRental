@@ -91,3 +91,8 @@ Car::Car(std::string manufacturer, std::string model, int buildyear, std::string
     Model = model;
     PricePerKM = pricePerKM;
 }
+
+Car::~Car() 
+{
+    
+}

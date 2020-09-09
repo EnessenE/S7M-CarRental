@@ -16,6 +16,7 @@ class Car{
     public: 
         Car() = default;
         Car(std::string manufacturer, std::string model, int buildyear, std::string licenseplate, double pricePerKM);
+        virtual ~Car();
 
         bool Rent();
         virtual double Return(int kilometers);

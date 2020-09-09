@@ -23,11 +23,13 @@ void addTestDataToAdministration(RentalAdministration *administration)
     {
         Car *sedan = new Sedan("BMW", "535d", 2012 + i, licencePlates[i], false);
         administration->Add(sedan);
+        delete sedan;
     }
     for (int i = 4; i < 6; i++)
     {
         Car *limousine = new Limousine("Rolls Roys", "Phantom Extended Wheelbase", 2015, licencePlates[i], true);
         administration->Add(limousine);
+        delete limousine;
     }
 }
 
@@ -77,6 +79,7 @@ static void rentCar(RentalAdministration *administration, size_t carNumber)
     else{
         cout << "ERROR: " << curr->ToString() << " is not available!" << endl;
     }
+    delete curr;
 }
 
 static void returnCar(RentalAdministration *administration, size_t carNumber)
@@ -91,6 +94,7 @@ static void returnCar(RentalAdministration *administration, size_t carNumber)
     catch(const domain_error error){
         cout << "ERROR: Car " << curr->ToString() << " - " << error.what() << endl;
     }
+    delete curr;
 }
 
 static void printIfCarNeedsCleaning(const RentalAdministration *administration, size_t carNumber)
@@ -103,6 +107,7 @@ static void printIfCarNeedsCleaning(const RentalAdministration *administration, 
     else{
         cout << "Car " << curr->ToString() << " doesn't need cleaning";
     }
+    delete curr;
 }
 
 static void cleanCar(RentalAdministration *administration, size_t carNumber)
@@ -111,6 +116,7 @@ static void cleanCar(RentalAdministration *administration, size_t carNumber)
     // clean this car, see: btnClean_Click
     administration->CleanCar(curr->GetLicensePlate());
     cout << "Car " << curr->ToString() << " has been cleaned";
+    delete curr;
 }
 
 static void showMenu(void)
